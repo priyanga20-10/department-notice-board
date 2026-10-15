@@ -1,0 +1,200 @@
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f4f9;
+  color: #1f2937;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Main application */
+.app {
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+/* Header */
+.app header {
+  background-color: #243b64;
+  color: #ffffff;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.app header h1 {
+  color: #ffffff;
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.app header p {
+  color: #f1f5f9;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Main content */
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Form and notice sections */
+.notice-form,
+.notice-list {
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.notice-form h2,
+.notice-list h2 {
+  color: #172554;
+  font-size: 23px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #9ca3af;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #5b6472;
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #315da8;
+  outline-offset: 1px;
+  border-color: #315da8;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+button {
+  display: block;
+  width: 100%;
+  padding: 13px 18px;
+  background-color: #243b64;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #172c50;
+}
+
+button:focus-visible {
+  outline: 3px solid #7398df;
+  outline-offset: 3px;
+}
+
+/* Empty state */
+.notice-list > p {
+  color: #4b5563;
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Notice cards */
+.notice-card {
+  background-color: #f8fafc;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  border-left: 5px solid #315da8;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
+.notice-card h3 {
+  color: #172554;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.notice-card p {
+  color: #374151;
+  margin: 0 0 12px;
+  white-space: pre-wrap;
+}
+
+.notice-card small {
+  display: block;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .app header {
+    padding: 25px 14px;
+  }
+
+  .app header h1 {
+    font-size: 24px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .notice-form,
+  .notice-list {
+    padding: 18px;
+  }
+
+  .notice-form h2,
+  .notice-list h2 {
+    font-size: 21px;
+  }
+}
